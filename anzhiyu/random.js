@@ -1,3 +1,3 @@
-var posts=["2024/10/16/qingt/","2024/10/16/关于前端与后端通信的一些说明/"];function toRandomPost(){
+var posts=["2024/10/16/qingt/","2024/10/16/一，参考资料/","2024/10/16/三，Spring_Boot_CLI如何使用_生成项目必须需要它吗_/","2024/10/16/七，JDBC_API和Spring_Data_JPA之间的爱恨情仇/","2024/10/16/二，Spring,Spring_MVC,Spring_boot/","2024/10/16/五，（实战，非知识点）用一个简单的项目去理解SSM架构/","2024/10/16/六，使用Spring_Boot搭建SSM架构的项目/","2024/10/16/关于前端与后端通信的一些说明/","2024/10/16/四，SSM架构是什么_/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
