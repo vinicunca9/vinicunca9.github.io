@@ -1,0 +1,581 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>三，Spring Boot CLI如何使用 生成项目必须需要它吗 | 白鹤忘机</title><meta name="keywords" content="Spring"><meta name="author" content="白鹤忘机"><meta name="copyright" content="白鹤忘机"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="三，Spring Boot CLI如何使用 生成项目必须需要它吗"><meta name="application-name" content="三，Spring Boot CLI如何使用 生成项目必须需要它吗"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="三，Spring Boot CLI如何使用 生成项目必须需要它吗"><meta property="og:url" content="http://www.vinicunca.top/2024/10/16/%E4%B8%89%EF%BC%8CSpring_Boot_CLI%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E5%BF%85%E9%A1%BB%E9%9C%80%E8%A6%81%E5%AE%83%E5%90%97_/index.html"><meta property="og:site_name" content="白鹤忘机"><meta property="og:description" content="要使用 Spring Boot CLI，首先需要安装它，然后你可以通过命令行创建、运行和管理 Spring Boot 项目。以下是详细的使用步骤： 1. 安装 Spring Boot CLI你可以通过多种方式安装 Spring Boot CLI，最常见的方式是通过包管理器： Mac 或 Linux"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2024/10/16/670f7c4e62196.jpg"><meta property="article:author" content="白鹤忘机"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2024/10/16/670f7c4e62196.jpg"><meta name="description" content="要使用 Spring Boot CLI，首先需要安装它，然后你可以通过命令行创建、运行和管理 Spring Boot 项目。以下是详细的使用步骤： 1. 安装 Spring Boot CLI你可以通过多种方式安装 Spring Boot CLI，最常见的方式是通过包管理器： Mac 或 Linux"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://www.vinicunca.top/2024/10/16/%E4%B8%89%EF%BC%8CSpring_Boot_CLI%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E5%BF%85%E9%A1%BB%E9%9C%80%E8%A6%81%E5%AE%83%E5%90%97_/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"tianli","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://open.bigmodel.cn/api/paas/v4/chat/completions"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 不忙就睡会午觉吧。","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点, 吃了没？","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":4},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 敲代码生活所迫","🔍 分享与热心帮助","🧱 团队小组毁灭机","💢 人不狠话也不多"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 白鹤忘机","link":"链接: ","source":"来源: 白鹤忘机","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '白鹤忘机',
+  title: '三，Spring Boot CLI如何使用 生成项目必须需要它吗',
+  postAI: '',
+  pageFillDescription: '1. 安装 Spring Boot CLI, Mac 或 Linux 使用 SDKMAN 安装, Mac 使用 Homebrew 安装, Windows 安装, 2. 验证安装是否成功, 3. 使用 Spring Boot CLI 创建和运行应用程序, 创建简单的 Web 应用, 运行 Groovy 应用程序, 4. 构建和打包 Spring Boot 应用, 打包 Groovy 应用为 JAR, 5. 使用 Maven 或 Gradle 创建 Spring Boot 项目, 使用 Maven 创建项目, 使用 Gradle 创建项目, 6. 更多 Spring Boot CLI 命令, 7. Spring Boot CLI 的适用场景, 总结, 实际生产中生成一个Spring项目很少用Spring Boot CLI我上面都是在说废话就是想让你了解一下原生态生成是怎么样的。, 在 IntelliJ IDEA  中, 使用 IntelliJ IDEA 创建 Spring Boot 项目, 项目成功运行后, 小提解惑完成上述的项目为什么是在8080端口？, 再解application.properties 和 application.yml有什么区别？, 1. 格式, 2. 层次结构, 3. 可读性, 4. 文件解析, 选择使用哪种格式主要取决于个人喜好和项目需求：要使用首先需要安装它然后你可以通过命令行创建运行和管理项目以下是详细的使用步骤安装你可以通过多种方式安装最常见的方式是通过包管理器或使用安装安装如果未安装使用安装使用安装如果你使用可以通过以下命令安装安装你可以通过官方的下载页面下载文件下载页面下载并解压文件然后将目录添加到系统的环境变量中验证安装是否成功安装完成后打开终端或命令提示符运行以下命令来验证是否正确安装如果安装成功你会看到类似以下输出使用创建和运行应用程序支持使用编写简单的应用程序以下是使用创建和运行一个简单应用程序的步骤创建简单的应用你可以通过代码快速创建一个服务创建一个新的文件内容如下运行应用程序在终端中导航到文件所在的目录使用以下命令运行应用程序会自动运行嵌入式的服务器默认是并启动应用程序打开浏览器访问你会看到页面输出构建和打包应用虽然主要用于快速开发和测试但你也可以将应用程序打包为文件以便部署打包应用为如果你想将应用打包成可执行的文件可以运行以下命令生成的包含了所有依赖和嵌入式服务器你可以通过以下命令运行这个文件使用或创建项目如果你想使用或创建更复杂的项目可以通过的初始化命令快速生成一个项目骨架使用创建项目这条命令会创建一个名为的项目并带有依赖创建好项目后你可以进入目录使用构建和运行项目使用创建项目生成项目后同样可以进入项目目录并运行更多命令提供了一些有用的命令可以帮助你快速开发和管理应用启动文件测试文件创建项目骨架生成文件查看帮助的适用场景非常适合以下场景快速原型开发你可以使用快速构建小型原型进行概念验证微服务开发简化了小型微服务的创建和管理学习和测试是学习框架以及测试简单功能的好工具总结通过你可以快速创建运行和打包应用程序它简化了开发流程尤其适合原型开发和测试安装并使用后你能够更快地进入应用开发实际生产中生成一个项目很少用我上面都是在说废话就是想让你了解一下原生态生成是怎么样的很多人觉得跟密不可分这个想法非常的错误这两个压根没有依赖和并生关系就是一个非常好用的框架而就是一款非常好用的编译器两两搭配非常的完美仅此而已你可能会说内部新建一个项目的时候有的选项可以选包管理器加入依赖可我要告诉你的是的官网就有这个我这里提供网址和截图在中你可以通过在中是来快速新建一个项目是一个用于生成项目骨架的工具它可以让你选择项目依赖和配置自动生成项目结构以下是使用创建一个项目的步骤使用创建项目打开启动点击欢迎页面的按钮选择在项目创建窗口选择然后点击配置项目元数据配置好这些参数后点击输入项目的组织名称例如输入项目名称例如项目的名称通常与名称相同选择项目的打包方式通常选择或无脑选选择或取决于你要使用的语言选择要使用的版本建议选择最新稳定版本选择依赖在依赖选择页面你可以选择项目所需的依赖常用的依赖有选好依赖后点击用于构建应用包括服务用于数据库访问用于添加安全认证和授权如果你要使用作为数据库配置项目路径设置项目的保存路径并点击会根据你的配置自动生成项目结构运行项目项目生成后会自动加载项目依赖并进行构建你可以通过以下步骤来运行项目打开下的主类通常名为点击该文件中的绿色箭头选择应用程序将启动或者你可以直接使用右上角的按钮运行项目项目成功运行后默认情况下会启动一个嵌入式的服务器如你可以在浏览器中访问来查看项目是否运行正常小提解惑完成上述的项目为什么是在端口项目默认使用端口是因为内置的服务器的配置内置了作为默认的服务器而的默认端口是所以如果不做任何修改项目启动时会监听这个端口如果需要更改端口号可以通过修改或文件中的配置来实现例如在中在中通过这种方式你可以将默认的端口更改为其他端口再解和有什么区别和都是项目中的配置文件主要区别在于它们的格式和表示结构的方式但功能上是等价的以下是它们的主要区别格式是基于键值对的简单配置格式每一行是一个配置项形式为使用的是格式层级结构更加清晰支持缩进表示配置项的层级关系层次结构的配置通常是通过点来表示层次关系每一行表示一个独立的配置项更适合处理层次结构的数据因为它使用缩进表示嵌套关系结构更加清晰可读性简单直观适合处理少量配置更具可读性尤其是在处理复杂的多层嵌套的配置时结构更加简洁明了文件解析在启动时会自动解析这两种文件无论是还是都可以用来配置应用程序实际上它们可以同时存在但建议使用一种格式来保持一致性选择使用哪种格式主要取决于个人喜好和项目需求如果你的配置比较简单或者团队习惯使用键值对配置可以选择如果你喜欢层次化结构配置较为复杂或者需要更好的可读性可以选择总之二者在功能上没有本质区别主要是语法格式的不同',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-16 20:20:29',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 3 || hour >= 4
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/welcome.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="wizard-scene"><div class="wizard-objects"><div class="wizard-square"></div><div class="wizard-circle"></div><div class="wizard-triangle"></div></div><div class="wizard"><div class="wizard-body"></div><div class="wizard-right-arm"><div class="wizard-right-hand"></div></div><div class="wizard-left-arm"><div class="wizard-left-hand"></div></div><div class="wizard-head"><div class="wizard-beard"></div><div class="wizard-face"><div class="wizard-adds"></div></div><div class="wizard-hat"><div class="wizard-hat-of-the-hat"></div><div class="wizard-four-point-star --first"></div><div class="wizard-four-point-star --second"></div><div class="wizard-four-point-star --third"></div></div></div></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)</script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://vinicunca9.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.yuque.com/baihewangji-hwmlm/2333?#" title="语雀知识库"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="语雀知识库"/><span class="back-menu-item-text">语雀知识库</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://share.lanol.cn/#/" title="文件快递柜"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="文件快递柜"/><span class="back-menu-item-text">文件快递柜</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://beautifytools.com/" title="在线转换"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="在线转换"/><span class="back-menu-item-text">在线转换</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://trace.moe/?ref=www.tboxn.com" title="动漫查找"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="动漫查找"/><span class="back-menu-item-text">动漫查找</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.photopea.com/" title="在线照片编辑器"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="在线照片编辑器"/><span class="back-menu-item-text">在线照片编辑器</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://picsmaller.com/" title="图片压缩"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="图片压缩"/><span class="back-menu-item-text">图片压缩</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">学习</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.typingclub.com/" title="打字练习1"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="打字练习1"/><span class="back-menu-item-text">打字练习1</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://monkeytype.com/" title="打字练习2"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="打字练习2"/><span class="back-menu-item-text">打字练习2</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">娱乐</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://quickdraw.withgoogle.com/" title="AI涂鸦"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="AI涂鸦"/><span class="back-menu-item-text">AI涂鸦</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">白鹤忘机</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://bu.dusays.com/2024/10/16/670f8f5810e9f.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://bu.dusays.com/2024/10/16/670f8f5810e9f.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://bu.dusays.com/2024/10/16/670f8f1e505dc.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://bu.dusays.com/2024/10/16/670f8f1e505dc.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Spring/" style="font-size: 1.05rem;">Spring<sup>7</sup></a><a href="/tags/vue3/" style="font-size: 1.05rem;">vue3<sup>5</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">前端<sup>2</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 1.05rem;">学习笔记<sup>3</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">17</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Spring/" itemprop="url">Spring</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Spring/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Spring</span></a></span></div></div><h1 class="post-title" itemprop="name headline">三，Spring Boot CLI如何使用 生成项目必须需要它吗<a class="post-edit-link" href="https://www.yuque.com/baihewangji-hwmlm/grl1df?#undefined/edit/" title="在 语雀 上编辑 - 三，Spring Boot CLI如何使用 生成项目必须需要它吗" target="_blank"><i class="anzhiyufont anzhiyu-icon-pencil"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-10-16T08:25:26.000Z" title="发表于 2024-10-16 16:25:26">2024-10-16</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-10-16T12:20:29.555Z" title="更新于 2024-10-16 20:20:29">2024-10-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为阜阳"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>阜阳</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://bu.dusays.com/2024/10/16/670f7c3ca74a7.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://www.vinicunca.top/2024/10/16/%E4%B8%89%EF%BC%8CSpring_Boot_CLI%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E5%BF%85%E9%A1%BB%E9%9C%80%E8%A6%81%E5%AE%83%E5%90%97_/"><header><a class="post-meta-categories" href="/categories/Spring/" itemprop="url">Spring</a><a href="/tags/Spring/" tabindex="-1" itemprop="url">Spring</a><h1 id="CrawlerTitle" itemprop="name headline">三，Spring Boot CLI如何使用 生成项目必须需要它吗</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">白鹤忘机</span><time itemprop="dateCreated datePublished" datetime="2024-10-16T08:25:26.000Z" title="发表于 2024-10-16 16:25:26">2024-10-16</time><time itemprop="dateCreated datePublished" datetime="2024-10-16T12:20:29.555Z" title="更新于 2024-10-16 20:20:29">2024-10-16</time></header><p>要使用 <strong>Spring Boot CLI</strong>，首先需要安装它，然后你可以通过命令行创建、运行和管理 Spring Boot 项目。以下是详细的使用步骤：</p>
+<h3 id="1-安装-Spring-Boot-CLI"><a href="#1-安装-Spring-Boot-CLI" class="headerlink" title="1. 安装 Spring Boot CLI"></a>1. <strong>安装 Spring Boot CLI</strong></h3><p>你可以通过多种方式安装 Spring Boot CLI，最常见的方式是通过包管理器：</p>
+<h4 id="Mac-或-Linux-使用-SDKMAN-安装"><a href="#Mac-或-Linux-使用-SDKMAN-安装" class="headerlink" title="Mac 或 Linux 使用 SDKMAN 安装"></a><strong>Mac 或 Linux 使用 SDKMAN 安装</strong></h4><ol>
+<li>安装 SDKMAN（如果未安装）：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -s <span class="string">&quot;https://get.sdkman.io&quot;</span> | bash</span><br><span class="line"><span class="built_in">source</span> <span class="string">&quot;<span class="variable">$HOME</span>/.sdkman/bin/sdkman-init.sh&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用 SDKMAN 安装 Spring Boot CLI：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sdk install springboot</span><br></pre></td></tr></table></figure>
+
+<h4 id="Mac-使用-Homebrew-安装"><a href="#Mac-使用-Homebrew-安装" class="headerlink" title="Mac 使用 Homebrew 安装"></a><strong>Mac 使用 Homebrew 安装</strong></h4><p>如果你使用 Homebrew，可以通过以下命令安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew tap spring-io/tap</span><br><span class="line">brew install spring-boot</span><br></pre></td></tr></table></figure>
+
+<h4 id="Windows-安装"><a href="#Windows-安装" class="headerlink" title="Windows 安装"></a><strong>Windows 安装</strong></h4><ol>
+<li>你可以通过官方的 Spring Boot CLI 下载页面下载 ZIP 文件：<br><a target="_blank" rel="noopener" href="https://spring.io/tools#spring-boot-cli">Spring Boot CLI 下载页面</a></li>
+<li>下载并解压文件，然后将 <code>bin</code> 目录添加到系统的 <code>PATH</code> 环境变量中。</li>
+</ol>
+<h3 id="2-验证安装是否成功"><a href="#2-验证安装是否成功" class="headerlink" title="2. 验证安装是否成功"></a>2. <strong>验证安装是否成功</strong></h3><p>安装完成后，打开终端或命令提示符，运行以下命令来验证 Spring Boot CLI 是否正确安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring --version</span><br></pre></td></tr></table></figure>
+
+<p>如果安装成功，你会看到类似以下输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Spring Boot v3.x.x</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-使用-Spring-Boot-CLI-创建和运行应用程序"><a href="#3-使用-Spring-Boot-CLI-创建和运行应用程序" class="headerlink" title="3. 使用 Spring Boot CLI 创建和运行应用程序"></a>3. <strong>使用 Spring Boot CLI 创建和运行应用程序</strong></h3><p>Spring Boot CLI 支持使用 Groovy 编写简单的 Spring Boot 应用程序。以下是使用 CLI 创建和运行一个简单 Web 应用程序的步骤：</p>
+<h4 id="创建简单的-Web-应用"><a href="#创建简单的-Web-应用" class="headerlink" title="创建简单的 Web 应用"></a><strong>创建简单的 Web 应用</strong></h4><p>你可以通过 Groovy 代码快速创建一个 RESTful 服务。创建一个新的文件 <code>app.groovy</code>，内容如下：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">HelloController</span> &#123;</span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">&quot;/&quot;</span>)</span><br><span class="line">    String home() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Hello, Spring Boot CLI!&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="运行-Groovy-应用程序"><a href="#运行-Groovy-应用程序" class="headerlink" title="运行 Groovy 应用程序"></a><strong>运行 Groovy 应用程序</strong></h4><p>在终端中，导航到 <code>app.groovy</code> 文件所在的目录，使用以下命令运行应用程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring run app.groovy</span><br></pre></td></tr></table></figure>
+
+<p>CLI 会自动运行嵌入式的 Web 服务器（默认是 Tomcat），并启动应用程序。打开浏览器访问 <code>http://localhost:8080/</code>，你会看到页面输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hello, Spring Boot CLI!</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-构建和打包-Spring-Boot-应用"><a href="#4-构建和打包-Spring-Boot-应用" class="headerlink" title="4. 构建和打包 Spring Boot 应用"></a>4. <strong>构建和打包 Spring Boot 应用</strong></h3><p>虽然 CLI 主要用于快速开发和测试，但你也可以将应用程序打包为 JAR 文件，以便部署。</p>
+<h4 id="打包-Groovy-应用为-JAR"><a href="#打包-Groovy-应用为-JAR" class="headerlink" title="打包 Groovy 应用为 JAR"></a><strong>打包 Groovy 应用为 JAR</strong></h4><p>如果你想将 Groovy 应用打包成可执行的 JAR 文件，可以运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring jar app.jar app.groovy</span><br></pre></td></tr></table></figure>
+
+<p>生成的 <code>app.jar</code> 包含了所有依赖和嵌入式服务器，你可以通过以下命令运行这个 JAR 文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar app.jar</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-使用-Maven-或-Gradle-创建-Spring-Boot-项目"><a href="#5-使用-Maven-或-Gradle-创建-Spring-Boot-项目" class="headerlink" title="5. 使用 Maven 或 Gradle 创建 Spring Boot 项目"></a>5. <strong>使用 Maven 或 Gradle 创建 Spring Boot 项目</strong></h3><p>如果你想使用 Maven 或 Gradle 创建更复杂的 Spring Boot 项目，可以通过 CLI 的初始化命令快速生成一个项目骨架。</p>
+<h4 id="使用-Maven-创建项目"><a href="#使用-Maven-创建项目" class="headerlink" title="使用 Maven 创建项目"></a><strong>使用 Maven 创建项目</strong></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring init --build=maven --dependencies=web myapp</span><br></pre></td></tr></table></figure>
+
+<p>这条命令会创建一个名为 <code>myapp</code> 的 Spring Boot 项目，并带有 Web 依赖。创建好项目后，你可以进入 <code>myapp</code> 目录，使用 Maven 构建和运行项目：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> myapp</span><br><span class="line">./mvnw spring-boot:run</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用-Gradle-创建项目"><a href="#使用-Gradle-创建项目" class="headerlink" title="使用 Gradle 创建项目"></a><strong>使用 Gradle 创建项目</strong></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring init --build=gradle --dependencies=web myapp</span><br></pre></td></tr></table></figure>
+
+<p>生成 Gradle 项目后，同样可以进入项目目录并运行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> myapp</span><br><span class="line">./gradlew bootRun</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-更多-Spring-Boot-CLI-命令"><a href="#6-更多-Spring-Boot-CLI-命令" class="headerlink" title="6. 更多 Spring Boot CLI 命令"></a>6. <strong>更多 Spring Boot CLI 命令</strong></h3><p>Spring Boot CLI 提供了一些有用的命令，可以帮助你快速开发和管理 Spring Boot 应用：</p>
+<ul>
+<li><strong>启动 Groovy 文件</strong>：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring run app.groovy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>测试 Groovy 文件</strong>：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring <span class="built_in">test</span> app.groovy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>创建项目骨架</strong>：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring init --dependencies=web,data-jpa myapp</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>生成 JAR 文件</strong>：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring jar myapp.jar app.groovy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>查看帮助</strong>：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">spring <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-Spring-Boot-CLI-的适用场景"><a href="#7-Spring-Boot-CLI-的适用场景" class="headerlink" title="7. Spring Boot CLI 的适用场景"></a>7. <strong>Spring Boot CLI 的适用场景</strong></h3><p>Spring Boot CLI 非常适合以下场景：</p>
+<ul>
+<li><strong>快速原型开发</strong>：你可以使用 Groovy 快速构建小型原型，进行概念验证。</li>
+<li><strong>微服务开发</strong>：CLI 简化了小型微服务的创建和管理。</li>
+<li><strong>学习和测试</strong>：CLI 是学习 Spring Boot 框架以及测试简单功能的好工具。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过 <strong>Spring Boot CLI</strong>，你可以快速创建、运行和打包 Spring Boot 应用程序。它简化了开发流程，尤其适合原型开发和测试。安装并使用 Spring Boot CLI 后，你能够更快地进入 Spring Boot 应用开发。</p>
+<h1 id="实际生产中生成一个Spring项目，很少用Spring-Boot-CLI，我上面都是在说废话，就是想让你了解一下，原生态生成是怎么样的。"><a href="#实际生产中生成一个Spring项目，很少用Spring-Boot-CLI，我上面都是在说废话，就是想让你了解一下，原生态生成是怎么样的。" class="headerlink" title="实际生产中生成一个Spring项目，很少用Spring Boot CLI，我上面都是在说废话，就是想让你了解一下，原生态生成是怎么样的。"></a>实际生产中生成一个Spring项目，很少用Spring Boot CLI，我上面都是在说废话，就是想让你了解一下，原生态生成是怎么样的。</h1><p><br/>color1<br>很多人觉得IDEA跟Spring boot密不可分，这个想法非常的错误，这两个压根没有依赖和并生关系，Spring boot就是一个非常好用的框架，而IDEA就是一款非常好用的编译器，两两搭配非常的完美，仅此而已。</p>
+<br/>
+
+<p>你可能会说IDEA内部新建一个项目的时候，有Spring Initializr的选项，可以选包管理器（Maven）,加入依赖</p>
+<p>可我要告诉你的是，Spring的官网就有这个，我这里提供网址和截图</p>
+<p><a target="_blank" rel="noopener" href="https://start.spring.io/">Spring Initializr</a></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.nlark.com/yuque/0/2024/png/43003206/1728891322001-94483b1f-919c-46fa-b4ad-6f43424482e0.png"></p>
+<h2 id="在-IntelliJ-IDEA-中，"><a href="#在-IntelliJ-IDEA-中，" class="headerlink" title="在 IntelliJ IDEA  中，"></a>在 IntelliJ IDEA  中，</h2><p>你可以通过 Spring Initializr（在IDEA 2024中是Spring boot） 来快速新建一个 Spring Boot 项目。Spring Initializr 是一个用于生成 Spring Boot 项目骨架的工具，它可以让你选择项目依赖和配置，自动生成项目结构。以下是使用 Spring Initializr 创建一个 Spring Boot 项目的步骤：</p>
+<h3 id="使用-IntelliJ-IDEA-创建-Spring-Boot-项目"><a href="#使用-IntelliJ-IDEA-创建-Spring-Boot-项目" class="headerlink" title="使用 IntelliJ IDEA 创建 Spring Boot 项目"></a>使用 IntelliJ IDEA 创建 Spring Boot 项目</h3><ol>
+<li><strong>打开 IntelliJ IDEA</strong><br>启动 IntelliJ IDEA，点击欢迎页面的 <strong>“New Project”</strong> 按钮。</li>
+<li><strong>选择 Spring Initializr</strong><br>在项目创建窗口，选择 <strong>Spring Initializr</strong>，然后点击 **”Next”**。</li>
+<li><strong>配置项目元数据</strong></li>
+</ol>
+<p>配置好这些参数后，点击 **”Next”**。</p>
+<pre><code>- **Group**：输入项目的组织名称（例如 `com.example`）。
+- **Artifact**：输入项目名称（例如 `myapp`）。
+- **Name**：项目的名称，通常与 Artifact 名称相同。
+- **Type**：选择项目的打包方式，通常选择 **Maven Project** 或 **Gradle Project**。
+</code></pre>
+<p><br/>tips<br>    - (无脑选<strong>Maven</strong>)</p>
+<br/>
+
+<pre><code>- **Language**：选择 Java（或 Kotlin、Groovy，取决于你要使用的语言）。
+- **Spring Boot Version**：选择要使用的 Spring Boot 版本，建议选择最新稳定版本。
+</code></pre>
+<ol start="4">
+<li><strong>选择依赖</strong><br>在依赖选择页面，你可以选择项目所需的依赖。常用的依赖有：</li>
+</ol>
+<p>选好依赖后，点击 **”Next”**。</p>
+<pre><code>- **Spring Web**：用于构建 Web 应用，包括 RESTful 服务。
+- **Spring Data JPA**：用于数据库访问。
+- **Spring Security**：用于添加安全认证和授权。
+- **MySQL Driver**：如果你要使用 MySQL 作为数据库。
+</code></pre>
+<ol start="5">
+<li><strong>配置项目路径</strong><br>设置项目的保存路径，并点击 **”Finish”**，IDEA 会根据你的配置自动生成项目结构。</li>
+<li><strong>运行 Spring Boot 项目</strong><br>项目生成后，IDEA 会自动加载项目依赖并进行构建。你可以通过以下步骤来运行项目：<ul>
+<li>打开 <code>src/main/java</code> 下的主类（通常名为 <code>Application.java</code>）。</li>
+<li>点击该文件中的 <strong>绿色箭头</strong>，选择 **Run ‘Application’**，Spring Boot 应用程序将启动。</li>
+<li>或者你可以直接使用右上角的 <strong>Run</strong> 按钮运行项目。</li>
+</ul>
+</li>
+</ol>
+<h3 id="项目成功运行后"><a href="#项目成功运行后" class="headerlink" title="项目成功运行后"></a>项目成功运行后</h3><p>默认情况下，Spring Boot 会启动一个嵌入式的 Web 服务器（如 Tomcat），你可以在浏览器中访问 <code>http://localhost:8080</code>，来查看项目是否运行正常。</p>
+<h2 id="小提解惑，完成上述的项目为什么是在8080端口？"><a href="#小提解惑，完成上述的项目为什么是在8080端口？" class="headerlink" title="小提解惑，完成上述的项目为什么是在8080端口？"></a>小提解惑，完成上述的项目为什么是在8080端口？</h2><p>Spring Boot 项目默认使用端口 8080，是因为内置的 Tomcat 服务器的配置。Spring Boot 内置了 Tomcat 作为默认的 web 服务器，而 Tomcat 的默认端口是 8080，所以如果不做任何修改，Spring Boot 项目启动时会监听这个端口。</p>
+<p>如果需要更改端口号，可以通过修改 <code>application.properties</code> 或 <code>application.yml</code> 文件中的配置来实现。例如：</p>
+<p><strong>在 <strong><code>application.properties</code></strong> 中：</strong></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port</span>=<span class="string">8081</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>在 <strong><code>application.yml</code></strong> 中：</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8081</span></span><br></pre></td></tr></table></figure>
+
+<p>通过这种方式，你可以将默认的 8080 端口更改为其他端口。</p>
+<h2 id="再解，application-properties-和-application-yml有什么区别？"><a href="#再解，application-properties-和-application-yml有什么区别？" class="headerlink" title="再解，application.properties 和 application.yml有什么区别？"></a>再解，<code>application.properties</code> 和 <code>application.yml</code>有什么区别？</h2><p><code>application.properties</code> 和 <code>application.yml</code> 都是 Spring Boot 项目中的配置文件，主要区别在于它们的格式和表示结构的方式，但功能上是等价的。以下是它们的主要区别：</p>
+<h3 id="1-格式"><a href="#1-格式" class="headerlink" title="1. 格式"></a>1. <strong>格式</strong></h3><ul>
+<li><code>application.properties</code> 是基于键值对的简单配置格式，每一行是一个配置项，形式为 <code>key=value</code>。</li>
+</ul>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port</span>=<span class="string">8081</span></span><br><span class="line"><span class="attr">spring.datasource.url</span>=<span class="string">jdbc:mysql://localhost:3306/dbname</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>application.yml</code> 使用的是 YAML (YAML Ain’t Markup Language) 格式，层级结构更加清晰。YAML 支持缩进表示配置项的层级关系。</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8081</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/dbname</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-层次结构"><a href="#2-层次结构" class="headerlink" title="2. 层次结构"></a>2. <strong>层次结构</strong></h3><ul>
+<li><code>application.properties</code> 的配置通常是通过点 (<code>.</code>) 来表示层次关系，每一行表示一个独立的配置项。</li>
+</ul>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring.datasource.url</span>=<span class="string">jdbc:mysql://localhost:3306/dbname</span></span><br><span class="line"><span class="attr">spring.datasource.username</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">spring.datasource.password</span>=<span class="string">12345</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>application.yml</code> 更适合处理层次结构的数据，因为它使用缩进表示嵌套关系，结构更加清晰：</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/dbname</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">12345</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-可读性"><a href="#3-可读性" class="headerlink" title="3. 可读性"></a>3. <strong>可读性</strong></h3><ul>
+<li><code>application.properties</code> 简单直观，适合处理少量配置。</li>
+<li><code>application.yml</code> 更具可读性，尤其是在处理复杂的、多层嵌套的配置时，结构更加简洁明了。</li>
+</ul>
+<h3 id="4-文件解析"><a href="#4-文件解析" class="headerlink" title="4. 文件解析"></a>4. <strong>文件解析</strong></h3><ul>
+<li>Spring Boot 在启动时会自动解析这两种文件，无论是 <code>application.properties</code> 还是 <code>application.yml</code>，都可以用来配置应用程序。实际上，它们可以同时存在，但建议使用一种格式来保持一致性。</li>
+</ul>
+<h3 id="选择使用哪种格式主要取决于个人喜好和项目需求："><a href="#选择使用哪种格式主要取决于个人喜好和项目需求：" class="headerlink" title="选择使用哪种格式主要取决于个人喜好和项目需求："></a>选择使用哪种格式主要取决于个人喜好和项目需求：</h3><ul>
+<li>如果你的配置比较简单，或者团队习惯使用键值对配置，可以选择 <code>application.properties</code>。</li>
+<li>如果你喜欢层次化结构、配置较为复杂，或者需要更好的可读性，可以选择 <code>application.yml</code>。</li>
+</ul>
+<p>总之，二者在功能上没有本质区别，主要是语法格式的不同。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f8bf946bd2.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f8bf946bd2.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">白鹤忘机</div><div class="post-copyright__author_desc">观看和感受正在经历的事物本相，而不是其名称。 ---艾伦·瓦兹-</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://www.vinicunca.top/2024/10/16/%E4%B8%89%EF%BC%8CSpring_Boot_CLI%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E5%BF%85%E9%A1%BB%E9%9C%80%E8%A6%81%E5%AE%83%E5%90%97_/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://www.vinicunca.top/2024/10/16/%E4%B8%89%EF%BC%8CSpring_Boot_CLI%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E5%BF%85%E9%A1%BB%E9%9C%80%E8%A6%81%E5%AE%83%E5%90%97_/')">三，Spring Boot CLI如何使用 生成项目必须需要它吗</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://bu.dusays.com/2024/10/16/670f8f5810e9f.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f8f5810e9f.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://bu.dusays.com/2024/10/16/670f8f1e505dc.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f8f1e505dc.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://www.vinicunca.top/2024/10/16/%E4%B8%89%EF%BC%8CSpring_Boot_CLI%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E5%BF%85%E9%A1%BB%E9%9C%80%E8%A6%81%E5%AE%83%E5%90%97_/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=三，Spring Boot CLI如何使用 生成项目必须需要它吗&amp;url=http://www.vinicunca.top/2024/10/16/%E4%B8%89%EF%BC%8CSpring_Boot_CLI%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8_%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E5%BF%85%E9%A1%BB%E9%9C%80%E8%A6%81%E5%AE%83%E5%90%97_/&amp;pic=https://bu.dusays.com/2024/10/16/670f7c3ca74a7.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.vinicunca.top" target="_blank">白鹤忘机</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Spring/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Spring<span class="tagsPageCount">7</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2024/10/30/6722499abe232.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/10/16/%E5%89%8D%E7%AB%AF/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670fd5fdd7040.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">一文说完前端</div></div></a></div><div class="next-post pull-right"><a href="/2024/10/16/%E4%BA%8C%EF%BC%8CSpring,Spring_MVC,Spring_boot/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f7c500d513.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">二，Spring,Spring_MVC,Spring_boot</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/10/10/%E4%B8%80%EF%BC%8C%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/" title="一，本合集参考资料"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f7c4931d9a.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-10</div><div class="title">一，本合集参考资料</div></div></a></div><div><a href="/2024/10/15/%E4%B8%83%EF%BC%8CJDBC_API%E5%92%8CSpring_Data_JPA%E4%B9%8B%E9%97%B4%E7%9A%84%E7%88%B1%E6%81%A8%E6%83%85%E4%BB%87/" title="七，JDBC_API和Spring_Data_JPA之间的爱恨情仇"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670fd5ffe123a.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-15</div><div class="title">七，JDBC_API和Spring_Data_JPA之间的爱恨情仇</div></div></a></div><div><a href="/2024/10/16/%E4%BA%8C%EF%BC%8CSpring,Spring_MVC,Spring_boot/" title="二，Spring,Spring_MVC,Spring_boot"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f7c500d513.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-16</div><div class="title">二，Spring,Spring_MVC,Spring_boot</div></div></a></div><div><a href="/2024/10/16/%E5%85%AD%EF%BC%8C%E4%BD%BF%E7%94%A8Spring_Boot%E6%90%AD%E5%BB%BASSM%E6%9E%B6%E6%9E%84%E7%9A%84%E9%A1%B9%E7%9B%AE/" title="六，使用Spring Boot搭建SSM架构的项目"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670fd5ff0a563.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-16</div><div class="title">六，使用Spring Boot搭建SSM架构的项目</div></div></a></div><div><a href="/2024/10/14/%E4%BA%94%EF%BC%8C%EF%BC%88%E5%AE%9E%E6%88%98%EF%BC%8C%E9%9D%9E%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%89%E7%94%A8%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%8E%BB%E7%90%86%E8%A7%A3SSM%E6%9E%B6%E6%9E%84/" title="五，（实战，非知识点）用一个简单的项目去理解SSM架构"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f7c5b6bbd6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-14</div><div class="title">五，（实战，非知识点）用一个简单的项目去理解SSM架构</div></div></a></div><div><a href="/2024/10/13/%E5%9B%9B%EF%BC%8CSSM%E6%9E%B6%E6%9E%84%E6%98%AF%E4%BB%80%E4%B9%88_/" title="四，SSM架构是什么_"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f7c4d0a716.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-13</div><div class="title">四，SSM架构是什么_</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/16/670f8bf946bd2.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这里记录<b style="color:#fff">学习过程中</b>的一些的问题和看法，还有<b style="color:#fff">资源</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">希望你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">白鹤忘机</h1><div class="author-info__desc">观看和感受正在经历的事物本相，而不是其名称。 ---艾伦·瓦兹-</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/baihejiangnan" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/171656743" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content"><div id="welcome-info"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-Spring-Boot-CLI"><span class="toc-number">1.</span> <span class="toc-text">1. 安装 Spring Boot CLI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mac-%E6%88%96-Linux-%E4%BD%BF%E7%94%A8-SDKMAN-%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">Mac 或 Linux 使用 SDKMAN 安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mac-%E4%BD%BF%E7%94%A8-Homebrew-%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">Mac 使用 Homebrew 安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows-%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.</span> <span class="toc-text">Windows 安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-number">2.</span> <span class="toc-text">2. 验证安装是否成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8-Spring-Boot-CLI-%E5%88%9B%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8C%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">3.</span> <span class="toc-text">3. 使用 Spring Boot CLI 创建和运行应用程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%AE%80%E5%8D%95%E7%9A%84-Web-%E5%BA%94%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">创建简单的 Web 应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C-Groovy-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">3.2.</span> <span class="toc-text">运行 Groovy 应用程序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%9E%84%E5%BB%BA%E5%92%8C%E6%89%93%E5%8C%85-Spring-Boot-%E5%BA%94%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">4. 构建和打包 Spring Boot 应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%93%E5%8C%85-Groovy-%E5%BA%94%E7%94%A8%E4%B8%BA-JAR"><span class="toc-number">4.1.</span> <span class="toc-text">打包 Groovy 应用为 JAR</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BD%BF%E7%94%A8-Maven-%E6%88%96-Gradle-%E5%88%9B%E5%BB%BA-Spring-Boot-%E9%A1%B9%E7%9B%AE"><span class="toc-number">5.</span> <span class="toc-text">5. 使用 Maven 或 Gradle 创建 Spring Boot 项目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Maven-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">5.1.</span> <span class="toc-text">使用 Maven 创建项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Gradle-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">5.2.</span> <span class="toc-text">使用 Gradle 创建项目</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%9B%B4%E5%A4%9A-Spring-Boot-CLI-%E5%91%BD%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text">6. 更多 Spring Boot CLI 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Spring-Boot-CLI-%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">7.</span> <span class="toc-text">7. Spring Boot CLI 的适用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E7%94%9F%E4%BA%A7%E4%B8%AD%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AASpring%E9%A1%B9%E7%9B%AE%EF%BC%8C%E5%BE%88%E5%B0%91%E7%94%A8Spring-Boot-CLI%EF%BC%8C%E6%88%91%E4%B8%8A%E9%9D%A2%E9%83%BD%E6%98%AF%E5%9C%A8%E8%AF%B4%E5%BA%9F%E8%AF%9D%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%83%B3%E8%AE%A9%E4%BD%A0%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B%EF%BC%8C%E5%8E%9F%E7%94%9F%E6%80%81%E7%94%9F%E6%88%90%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84%E3%80%82"><span class="toc-number"></span> <span class="toc-text">实际生产中生成一个Spring项目，很少用Spring Boot CLI，我上面都是在说废话，就是想让你了解一下，原生态生成是怎么样的。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-IntelliJ-IDEA-%E4%B8%AD%EF%BC%8C"><span class="toc-number"></span> <span class="toc-text">在 IntelliJ IDEA  中，</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-IntelliJ-IDEA-%E5%88%9B%E5%BB%BA-Spring-Boot-%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">使用 IntelliJ IDEA 创建 Spring Boot 项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C%E5%90%8E"><span class="toc-number">2.</span> <span class="toc-text">项目成功运行后</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E6%8F%90%E8%A7%A3%E6%83%91%EF%BC%8C%E5%AE%8C%E6%88%90%E4%B8%8A%E8%BF%B0%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%9C%A88080%E7%AB%AF%E5%8F%A3%EF%BC%9F"><span class="toc-number"></span> <span class="toc-text">小提解惑，完成上述的项目为什么是在8080端口？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%8D%E8%A7%A3%EF%BC%8Capplication-properties-%E5%92%8C-application-yml%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number"></span> <span class="toc-text">再解，application.properties 和 application.yml有什么区别？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">1. 格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">2. 层次结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8F%AF%E8%AF%BB%E6%80%A7"><span class="toc-number">3.</span> <span class="toc-text">3. 可读性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90"><span class="toc-number">4.</span> <span class="toc-text">4. 文件解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8%E5%93%AA%E7%A7%8D%E6%A0%BC%E5%BC%8F%E4%B8%BB%E8%A6%81%E5%8F%96%E5%86%B3%E4%BA%8E%E4%B8%AA%E4%BA%BA%E5%96%9C%E5%A5%BD%E5%92%8C%E9%A1%B9%E7%9B%AE%E9%9C%80%E6%B1%82%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">选择使用哪种格式主要取决于个人喜好和项目需求：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/10/30/%E4%BA%94%EF%BC%8CVue3%E9%9B%86%E6%88%90Vue-Router%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC/" title="五，Vue3集成Vue-Router实现路由跳转"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/30/6722499abe232.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="五，Vue3集成Vue-Router实现路由跳转"/></a><div class="content"><a class="title" href="/2024/10/30/%E4%BA%94%EF%BC%8CVue3%E9%9B%86%E6%88%90Vue-Router%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC/" title="五，Vue3集成Vue-Router实现路由跳转">五，Vue3集成Vue-Router实现路由跳转</a><time datetime="2024-10-30T14:39:26.000Z" title="发表于 2024-10-30 22:39:26">2024-10-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/30/%E5%9B%9B%EF%BC%8CElement-Plus%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E4%B8%80%E8%A7%88/" title="四，Element-Plus常用组件一览"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/30/6722499abe232.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="四，Element-Plus常用组件一览"/></a><div class="content"><a class="title" href="/2024/10/30/%E5%9B%9B%EF%BC%8CElement-Plus%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E4%B8%80%E8%A7%88/" title="四，Element-Plus常用组件一览">四，Element-Plus常用组件一览</a><time datetime="2024-10-30T14:38:26.000Z" title="发表于 2024-10-30 22:38:26">2024-10-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/30/%E4%B8%89%EF%BC%8C%E5%90%8E%E7%BC%80%E5%90%8D%E4%B8%BAscss%E6%98%AF%E4%BB%80%E4%B9%88%E6%96%87%E4%BB%B6%E5%91%A2_/" title="三，后缀名为scss是什么文件呢？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/30/6722499abe232.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三，后缀名为scss是什么文件呢？"/></a><div class="content"><a class="title" href="/2024/10/30/%E4%B8%89%EF%BC%8C%E5%90%8E%E7%BC%80%E5%90%8D%E4%B8%BAscss%E6%98%AF%E4%BB%80%E4%B9%88%E6%96%87%E4%BB%B6%E5%91%A2_/" title="三，后缀名为scss是什么文件呢？">三，后缀名为scss是什么文件呢？</a><time datetime="2024-10-30T14:37:26.000Z" title="发表于 2024-10-30 22:37:26">2024-10-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/30/%E4%BA%8C%EF%BC%8CVue%E9%9B%86%E6%88%90UI%E6%A1%86%E6%9E%B6Elemen-Plus/" title="二，Vue集成UI框架Elemen-Plus"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/30/6722499abe232.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二，Vue集成UI框架Elemen-Plus"/></a><div class="content"><a class="title" href="/2024/10/30/%E4%BA%8C%EF%BC%8CVue%E9%9B%86%E6%88%90UI%E6%A1%86%E6%9E%B6Elemen-Plus/" title="二，Vue集成UI框架Elemen-Plus">二，Vue集成UI框架Elemen-Plus</a><time datetime="2024-10-30T14:36:26.000Z" title="发表于 2024-10-30 22:36:26">2024-10-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/30/%E4%B8%80%EF%BC%8CVue_%E6%A1%86%E6%9E%B6%E7%9A%84%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/" title="一，Vue 框架的快速搭建"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/30/6722499abe232.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一，Vue 框架的快速搭建"/></a><div class="content"><a class="title" href="/2024/10/30/%E4%B8%80%EF%BC%8CVue_%E6%A1%86%E6%9E%B6%E7%9A%84%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/" title="一，Vue 框架的快速搭建">一，Vue 框架的快速搭建</a><time datetime="2024-10-30T14:35:25.000Z" title="发表于 2024-10-30 22:35:25">2024-10-30</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 By <a class="footer-bar-link" href="/" title="白鹤忘机" target="_blank">白鹤忘机</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">5</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://vinicunca9.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.yuque.com/baihewangji-hwmlm/2333?#" title="语雀知识库"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="语雀知识库"/><span class="back-menu-item-text">语雀知识库</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://share.lanol.cn/#/" title="文件快递柜"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="文件快递柜"/><span class="back-menu-item-text">文件快递柜</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://beautifytools.com/" title="在线转换"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="在线转换"/><span class="back-menu-item-text">在线转换</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://trace.moe/?ref=www.tboxn.com" title="动漫查找"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="动漫查找"/><span class="back-menu-item-text">动漫查找</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.photopea.com/" title="在线照片编辑器"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="在线照片编辑器"/><span class="back-menu-item-text">在线照片编辑器</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://picsmaller.com/" title="图片压缩"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="图片压缩"/><span class="back-menu-item-text">图片压缩</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">学习</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.typingclub.com/" title="打字练习1"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="打字练习1"/><span class="back-menu-item-text">打字练习1</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://monkeytype.com/" title="打字练习2"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="打字练习2"/><span class="back-menu-item-text">打字练习2</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">娱乐</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://quickdraw.withgoogle.com/" title="AI涂鸦"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2024/10/25/671b2eb07d105.ico" alt="AI涂鸦"/><span class="back-menu-item-text">AI涂鸦</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Spring/" style="font-size: 0.88rem;">Spring<sup>7</sup></a><a href="/tags/vue3/" style="font-size: 0.88rem;">vue3<sup>5</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">前端<sup>2</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 0.88rem;">学习笔记<sup>3</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script>var meting_api = "https://meting.qjqq.cn/?type=playlist&id=2326637671&server=netease";
+</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("10/10/2024 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 白鹤忘机 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.cbd.int/mermaid@10.2.4/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><input type="hidden" name="page-type" id="page-type" value="tags"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="/js/welcome.js"></script><script id="click-show-text" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="The,setting,sun,seems,so,sublime,But,it,is,near,its,dying,time" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
